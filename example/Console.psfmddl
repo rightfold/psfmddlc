@@ -1,0 +1,10 @@
+module System.Console.Algebra;
+
+import Control.Monad.Eff.Exception (Error);
+import Data.Either (Either);
+import Prelude;
+
+algebra Console {
+  method readLine(): Either Error String;
+  method writeLine(Int, String): Either Error Unit;
+}
